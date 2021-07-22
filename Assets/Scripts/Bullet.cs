@@ -16,6 +16,8 @@ public class Bullet : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
+        gameObject.SetActive(false);
     }
 }
