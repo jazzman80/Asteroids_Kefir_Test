@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
             body.AddForce(transform.forward * speed);
         }
         
-        //rotation
+        //rotate
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
         body.AddTorque(transform.up * rotation);
     }
