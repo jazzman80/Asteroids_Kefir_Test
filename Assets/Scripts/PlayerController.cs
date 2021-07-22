@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //move forward
-
-
         if (Input.GetAxis("Vertical") > 0)
         {
             float speed = Input.GetAxis("Vertical") * movingSpeed * Time.fixedDeltaTime;
@@ -22,7 +20,12 @@ public class PlayerController : MonoBehaviour
         
         //rotation
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
-        
         body.AddTorque(transform.up * rotation);
+    }
+
+    //if starship moved out of screen
+    private void OnBecameInvisible()
+    {
+        transform.position = new Vector3(-transform.position.x, 0, -transform.position.z);
     }
 }
