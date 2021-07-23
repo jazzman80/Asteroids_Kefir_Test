@@ -12,6 +12,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 121424889946234270, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121424889946234270, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -51,9 +55,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9049620717520815741, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
       propertyPath: m_Name
-      value: Ammo
+      value: Laser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}

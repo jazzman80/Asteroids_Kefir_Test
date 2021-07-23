@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3316636869820282493, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
+      propertyPath: fireForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3316636869820282493, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 8758873249642326757, guid: f5752febc38e7df4abd2445f89ecdfd0, type: 3}
+    - target: {fileID: -3316636869820282493, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
+      propertyPath: chargeTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3316636869820282493, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
+      propertyPath: fireButton
+      value: Fire1
+      objectReference: {fileID: 0}
     - target: {fileID: 3177105310855346794, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
       propertyPath: m_Name
-      value: Gun
+      value: Bullet Gun
       objectReference: {fileID: 0}
     - target: {fileID: 5777710546051719561, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
       propertyPath: m_RootOrder

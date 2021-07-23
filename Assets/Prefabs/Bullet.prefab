@@ -51,9 +51,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7469179
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065541801141366869, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.r
+      value: 0.05729794
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472714710124968133, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472714710124968133, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472714710124968133, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9049620717520815741, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
       propertyPath: m_Name
-      value: Ammo
+      value: Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6a856728b55354fb4211c35ef666ef, type: 3}
