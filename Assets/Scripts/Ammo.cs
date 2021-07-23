@@ -12,10 +12,4 @@ public class Ammo : MonoBehaviour
         body.AddForce(transform.forward * fireForce, ForceMode.Impulse);
     }
 
-    private void OnBecameInvisible()
-    {
-        body.velocity = Vector3.zero;
-        body.angularVelocity = Vector3.zero;
-        gameObject.SetActive(false);
-    }
 }

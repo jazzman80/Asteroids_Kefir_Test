@@ -23,6 +23,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
       value: UFO

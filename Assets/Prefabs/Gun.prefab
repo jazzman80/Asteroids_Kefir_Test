@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoPrefab: {fileID: 0}
   fireForce: 0
+  chargeTime: 0
   fireButton: 
 --- !u!1001 &1725612707987878089
 PrefabInstance:
@@ -74,6 +75,7 @@ PrefabInstance:
     - {fileID: -1668449909100755525, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
     - {fileID: 2279039438395274267, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
     - {fileID: 7852461295905422475, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - {fileID: 3670931771265431470, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
 --- !u!1 &3177105310855346794 stripped
 GameObject:

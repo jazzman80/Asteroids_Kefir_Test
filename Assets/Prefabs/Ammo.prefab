@@ -45,8 +45,24 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3670931771265431470, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670931771265431470, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670931771265431470, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
       propertyPath: m_Name
+      value: Ammo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+      propertyPath: m_TagString
       value: Ammo
       objectReference: {fileID: 0}
     - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
