@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
                 if (!bulletsPool[i].gameObject.activeSelf)
                 {
                     bulletsPool[i].gameObject.SetActive(true);
-                    bulletsPool[i].Fired(transform, fireForce);
+                    bulletsPool[i].Fire(transform, fireForce);
                     isFired = true;
                     break;
                 }
@@ -34,6 +34,6 @@ public class Gun : MonoBehaviour
     {
         Bullet newBullet = Instantiate(bulletPrefab);
         bulletsPool.Add(newBullet);
-        newBullet.Fired(transform, fireForce);
+        newBullet.Fire(transform, fireForce);
     }
 }

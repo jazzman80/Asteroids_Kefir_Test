@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   shotTime: 0.05
+  chargeTime: 3

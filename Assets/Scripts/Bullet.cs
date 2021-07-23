@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
 
-    public void Fired(Transform gunTransform, float fireForce)
+    public void Fire(Transform gunTransform, float fireForce)
     {
         transform.position = gunTransform.position;
         transform.rotation = gunTransform.rotation;

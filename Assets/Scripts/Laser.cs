@@ -9,12 +9,12 @@ public class Laser : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void Fired(Transform laserGunTransform, float shotTime)
+    public void Fire(Transform laserGunTransform, float shotTime)
     {
-        this.gameObject.SetActive(true);
-        transform.position = laserGunTransform.position;
-        transform.rotation = laserGunTransform.rotation;
-        StartCoroutine(LaserFire(shotTime));
+            this.gameObject.SetActive(true);
+            transform.position = laserGunTransform.position;
+            transform.rotation = laserGunTransform.rotation;
+            StartCoroutine(LaserFire(shotTime));
     }
 
     private IEnumerator LaserFire(float shotTime)
