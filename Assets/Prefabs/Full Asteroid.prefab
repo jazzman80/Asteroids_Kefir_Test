@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3779286142839351287, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
       propertyPath: m_Name
-      value: Asteriod
+      value: Full Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: 5209378245832883220, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +54,14 @@ PrefabInstance:
     - target: {fileID: 5209378245832883220, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164928661513212383, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 401c6223b205127499fd373c711e397a, type: 3}
+    - target: {fileID: 7164928661513212383, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}

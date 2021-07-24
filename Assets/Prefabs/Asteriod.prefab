@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Asteriod
       objectReference: {fileID: 0}
     - target: {fileID: 4883138011284460374, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_RootOrder
@@ -53,6 +53,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883138011284460374, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Size.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Size.y
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

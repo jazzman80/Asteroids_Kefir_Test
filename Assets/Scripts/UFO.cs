@@ -18,11 +18,6 @@ public class UFO : MonoBehaviour
         body.AddForce(transform.forward * movingSpeed * Time.fixedDeltaTime);
     }
 
-    public void SetPosition(Transform startPoint)
-    {
-        transform.position = startPoint.position;
-    }
-
     public void SetTarget(Transform target)
     {
         this.target = target;
