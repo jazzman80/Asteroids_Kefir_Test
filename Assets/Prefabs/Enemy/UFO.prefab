@@ -1,15 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &832895228742823746
+--- !u!114 &7819454002291153028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398882997389479977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee46020a39c03a44bc359ba6042f0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1860291423656599345}
+  movingSpeed: 100
+  rotationSpeed: 100
+  target: {fileID: 0}
+--- !u!1001 &8435556623851739292
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
-      value: Asteriod
+      value: UFO
       objectReference: {fileID: 0}
     - target: {fileID: 4883138011284460374, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_RootOrder
@@ -57,19 +77,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.x
-      value: 5.12
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.y
-      value: 5.12
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 97b326f08bb5e3b41814f4c6e068cfe2, type: 3}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -5124594820684204710, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+--- !u!1 &5398882997389479977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+  m_PrefabInstance: {fileID: 8435556623851739292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1860291423656599345 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+  m_PrefabInstance: {fileID: 8435556623851739292}
+  m_PrefabAsset: {fileID: 0}

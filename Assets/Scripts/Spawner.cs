@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour
 {
     [Header("Prefabs")]
     [SerializeField] private PlayerController playerPrefab;
-    [SerializeField] private GameObject ufoPrefab;
-    [SerializeField] private GameObject asteroidPrefab;
+    [SerializeField] private UFO ufoPrefab;
+    [SerializeField] private Asteroid asteroidPrefab;
     [SerializeField] private Transform[] spawnPoints;
 
     [Header("Maximum Enemies")]
@@ -18,8 +18,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float uFOCooldownTime;
     [SerializeField] private float asteroidCooldownTime;
 
-    private List<GameObject> uFOPool = new List<GameObject>();
-    private List<GameObject> asteroidsPool = new List<GameObject>();
+    private List<Enemy> uFOPool = new List<Enemy>();
+    private List<Enemy> asteroidsPool = new List<Enemy>();
+    private EnemyPool uFOsPool;
 
     private bool needsUFO = true;
     private bool needsAsteroid = true;
@@ -27,6 +28,9 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         PlayerController newPlayer = Instantiate(playerPrefab);
+
+        uFOsPool.SetData(ufoPrefab, maximumUFOs);
+
 
         CreatePool(ufoPrefab, maximumUFOs, uFOPool);
         CreatePool(asteroidPrefab, maximumAsteroids, asteroidsPool);
@@ -36,43 +40,45 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (needsUFO) ActivateEnemy(uFOPool, needsUFO, uFOCooldownTime);
-        if (needsAsteroid) ActivateEnemy(asteroidsPool, needsAsteroid, asteroidCooldownTime);
+        if (needsUFO) ActivateEnemy(uFOPool, out needsUFO, uFOCooldownTime);
+        //if (needsAsteroid) ActivateEnemy(asteroidsPool, needsAsteroid, asteroidCooldownTime);
     }
 
-    private void CreatePool(GameObject enemy, int maximumEnemies, List<GameObject> pool)
+    private void CreatePool(Enemy prefab, int maximumEnemies, List<Enemy> pool)
     {
         for (int i = 0; i < maximumEnemies; i++)
         {
-            GameObject newEnemy = Instantiate(enemy);
+            Enemy newEnemy = Instantiate(prefab);
             newEnemy.gameObject.SetActive(false);
-            pool.Add(newEnemy);
+            pool.Add(prefab);
         }
     }
 
-    private void SetTargets(List<GameObject> pool, Transform target)
+    private void SetTargets(List<Enemy> pool, Transform target)
     {
         for(int i = 0; i < pool.Count; i++)
         {
-            UFO newUFO = pool[i].GetComponent<UFO>();
-            newUFO.SetTarget(target);
+            pool[i].SetTarget(target);
         }
     }
 
-    private void ActivateEnemy(List<GameObject> pool, bool needsEnemy, float cooldownTime)
+    private void ActivateEnemy(List<Enemy> pool, out bool needsEnemy, float cooldownTime)
     {
+        needsEnemy = true;
+
         for (int i = 0; i < pool.Count; i++)
         {
             if (!pool[i].gameObject.activeSelf)
             {
                 pool[i].gameObject.SetActive(true);
                 int randomPoint = Random.Range(0, spawnPoints.Length);
-                pool[i].transform.position = spawnPoints[randomPoint].position;
+                pool[i].SetPosition(spawnPoints[randomPoint]);
                 needsEnemy = false;
                 StartCoroutine(Cooldown(needsEnemy, cooldownTime));
                 break;
             }
         }
+
     }
 
     private IEnumerator Cooldown(bool needsEnemy, float cooldownTime)

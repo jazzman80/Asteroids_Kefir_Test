@@ -551,8 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 8412836858810171087, guid: 338b31ad331c06043b5bf49178d290c1, type: 3}
   ufoPrefab: {fileID: 7819454002291153028, guid: 58569fd9194f998479e619a7a6e035f5, type: 3}
-  maximumUFOCount: 5
-  uFOCooldownTime: 5
+  asteroidPrefab: {fileID: 1381792229825070310, guid: 2e00194f93c1a5943a50ce589420d41d, type: 3}
   spawnPoints:
   - {fileID: 1267262724}
   - {fileID: 1902471721}
@@ -562,6 +561,10 @@ MonoBehaviour:
   - {fileID: 1907518775}
   - {fileID: 849312549}
   - {fileID: 61675398}
+  maximumUFOs: 10
+  maximumAsteroids: 1
+  uFOCooldownTime: 5
+  asteroidCooldownTime: 5
 --- !u!4 &1267262724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2247921325439725359, guid: 2828aa1d0bcbf9049a87c76f419ee2c5, type: 3}
