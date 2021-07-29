@@ -7,6 +7,7 @@ public class Asteroid : Stone
     [SerializeField] List<Stone> stonePool = new List<Stone>();
     [SerializeField] Stone stonePrefab;
     [SerializeField] int stonesCount;
+    Quaternion movingDirection;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class Asteroid : Stone
         transform.LookAt(Vector3.zero);
         float randomAngle = Random.Range(-20.0f, 20.0f);
         transform.Rotate(Vector3.up, randomAngle);
+        movingDirection = transform.rotation;
     }
 
     //Explode to stones
@@ -32,7 +34,7 @@ public class Asteroid : Stone
         foreach(Stone stone in stonePool)
         {
             stone.transform.position = transform.position;
-            stone.transform.rotation = transform.rotation;
+            stone.transform.rotation = movingDirection;
             stone.gameObject.SetActive(true);
         }
     }
