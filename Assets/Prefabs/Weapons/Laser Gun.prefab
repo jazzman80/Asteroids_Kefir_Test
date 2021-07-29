@@ -15,7 +15,8 @@ MonoBehaviour:
   ammo: {fileID: -6577239594637822523, guid: 91e3786ce2945dc4fab3c44e13aedef1, type: 3}
   fireForce: 30
   fireButton: Fire2
-  chargeTime: 3
+  chargeTime: 1
+  maximumCharge: 3
 --- !u!1001 &3685762041449820534
 PrefabInstance:
   m_ObjectHideFlags: 0
