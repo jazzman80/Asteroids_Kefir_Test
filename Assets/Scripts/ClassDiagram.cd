@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Player" Collapsed="true">
+    <Position X="1.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAgAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ammo" Collapsed="true">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ammo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gun" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAAAACAAAAAAAAAAAAEAAAABAAAAAAgAQA=</HashCode>
+      <FileName>Assets\Scripts\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LaserGun" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAQASA=</HashCode>
+      <FileName>Assets\Scripts\LaserGun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UFO" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAiAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\UFO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -4,86 +4,53 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [Header("Prefabs")]
-    [SerializeField] private PlayerController playerPrefab;
-    [SerializeField] private UFO ufoPrefab;
-    [SerializeField] private Asteroid asteroidPrefab;
-    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] Enemy enemy;
+    [SerializeField] float maximumEnemies;
+    [SerializeField] float cooldownTime;
+    [SerializeField] Transform[] spawnPoints;
 
-    [Header("Maximum Enemies")]
-    [SerializeField] private int maximumUFOs;
-    [SerializeField] private int maximumAsteroids;
-
-    [Header("Cooldown Times")]
-    [SerializeField] private float uFOCooldownTime;
-    [SerializeField] private float asteroidCooldownTime;
-
-    private List<Enemy> uFOPool = new List<Enemy>();
-    private List<Enemy> asteroidsPool = new List<Enemy>();
-    private EnemyPool uFOsPool;
-
-    private bool needsUFO = true;
-    private bool needsAsteroid = true;
+    List<Enemy> enemyPool = new List<Enemy>();
+    bool isNeedEnemy = true;
 
     private void Start()
     {
-        PlayerController newPlayer = Instantiate(playerPrefab);
-
-        uFOsPool.SetData(ufoPrefab, maximumUFOs);
-
-
-        CreatePool(ufoPrefab, maximumUFOs, uFOPool);
-        CreatePool(asteroidPrefab, maximumAsteroids, asteroidsPool);
-
-        SetTargets(uFOPool, newPlayer.transform);
+        //build enemy pool
+        for(int i = 0; i < maximumEnemies; i++)
+        {
+            Enemy newEnemy = Instantiate(enemy);
+            newEnemy.gameObject.SetActive(false);
+            enemyPool.Add(newEnemy);
+        }
     }
 
     private void Update()
     {
-        if (needsUFO) ActivateEnemy(uFOPool, out needsUFO, uFOCooldownTime);
-        //if (needsAsteroid) ActivateEnemy(asteroidsPool, needsAsteroid, asteroidCooldownTime);
-    }
-
-    private void CreatePool(Enemy prefab, int maximumEnemies, List<Enemy> pool)
-    {
-        for (int i = 0; i < maximumEnemies; i++)
+        //activate enemy if cooldown time is over
+        if (isNeedEnemy)
         {
-            Enemy newEnemy = Instantiate(prefab);
-            newEnemy.gameObject.SetActive(false);
-            pool.Add(prefab);
-        }
-    }
-
-    private void SetTargets(List<Enemy> pool, Transform target)
-    {
-        for(int i = 0; i < pool.Count; i++)
-        {
-            pool[i].SetTarget(target);
-        }
-    }
-
-    private void ActivateEnemy(List<Enemy> pool, out bool needsEnemy, float cooldownTime)
-    {
-        needsEnemy = true;
-
-        for (int i = 0; i < pool.Count; i++)
-        {
-            if (!pool[i].gameObject.activeSelf)
+            foreach(Enemy enemy in enemyPool)
             {
-                pool[i].gameObject.SetActive(true);
-                int randomPoint = Random.Range(0, spawnPoints.Length);
-                pool[i].SetPosition(spawnPoints[randomPoint]);
-                needsEnemy = false;
-                StartCoroutine(Cooldown(needsEnemy, cooldownTime));
-                break;
+                if (!enemy.gameObject.activeSelf)
+                {
+
+                    //set enemy at random spawn point
+                    int randomPointIndex = Random.Range(0, spawnPoints.Length);
+                    Transform randomPoint = spawnPoints[randomPointIndex];
+                    enemy.gameObject.transform.position = randomPoint.position;
+                    enemy.gameObject.SetActive(true);
+
+                    isNeedEnemy = false;
+                    StartCoroutine(Cooldown());
+
+                    break;
+                }
             }
         }
-
     }
 
-    private IEnumerator Cooldown(bool needsEnemy, float cooldownTime)
+    IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(cooldownTime);
-        needsEnemy = true;
+        isNeedEnemy = true;
     }
 }
