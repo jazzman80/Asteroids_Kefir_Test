@@ -9,8 +9,12 @@ public class Stone : Enemy
     [SerializeField] float randomSize;
     [SerializeField] Vector3 scaleSize;
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
+        transform.localScale = scaleSize;
+        body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
+
         SetRandomTrajectory();
 
         SetRandomSize();
@@ -20,9 +24,8 @@ public class Stone : Enemy
         SetRandomRotation();
     }
 
-    private void SetRandomTrajectory()
+    public virtual void SetRandomTrajectory()
     {
-        transform.LookAt(Vector3.zero);
         float randomAngle = Random.Range(-20.0f, 20.0f);
         transform.Rotate(Vector3.up, randomAngle);
     }
@@ -50,9 +53,7 @@ public class Stone : Enemy
     //if goes out of screen
     private void OnBecameInvisible()
     {
-        transform.localScale = scaleSize;
-        body.velocity = Vector3.zero;
-        body.angularVelocity = Vector3.zero;
         gameObject.SetActive(false);
     }
+
 }

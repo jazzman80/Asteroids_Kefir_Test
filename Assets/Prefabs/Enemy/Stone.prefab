@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8645061614250543768}
-  initialSpeed: 10
-  randomSpeed: 8
+  initialSpeed: 5
+  randomSpeed: 2
   randomRotationSpeed: 5
-  initialSize: 0.3
   randomSize: 0.2
+  scaleSize: {x: 0, y: 0, z: 0}
 --- !u!1001 &1961711829019610421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,6 +25,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Size.x
+      value: 4.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Size.z
+      value: 4.58
+      objectReference: {fileID: 0}
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
       value: Stone
