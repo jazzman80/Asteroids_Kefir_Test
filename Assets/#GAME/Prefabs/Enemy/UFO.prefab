@@ -1,24 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3931024640439898992
+--- !u!114 &-8333332927786270433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2649479935924553088}
+  m_GameObject: {fileID: 5398882997389479977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404eb10563494924ab1e65853dd9de9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 31420cbf633db8040adb75c6e45ed2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 8645061614250543768}
-  initialSpeed: 5
-  randomSpeed: 2
-  randomRotationSpeed: 5
-  randomSize: 0.2
-  scaleSize: {x: 0, y: 0, z: 0}
---- !u!1001 &1961711829019610421
+  OnKill: {fileID: 11400000, guid: 5f15a8a8a3305af43b8a4ed533f75a70, type: 2}
+  scorePoints: 10
+  body: {fileID: 1860291423656599345}
+  movingSpeed: 50
+  rotatingSpeed: 50
+  target: {fileID: 0}
+--- !u!1001 &8435556623851739292
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -26,16 +26,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Size.x
-      value: 4.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Size.z
-      value: 4.58
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
-      value: Stone
+      value: UFO
       objectReference: {fileID: 0}
     - target: {fileID: 4883138011284460374, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_RootOrder
@@ -83,46 +79,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.x
-      value: 5.12
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.y
-      value: 5.12
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 401c6223b205127499fd373c711e397a, type: 3}
+      objectReference: {fileID: 21300000, guid: 97b326f08bb5e3b41814f4c6e068cfe2, type: 3}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Drag
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Constraints
-      value: 84
-      objectReference: {fileID: 0}
-    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: -5124594820684204710, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
     - {fileID: 5900235648788162534, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
---- !u!1 &2649479935924553088 stripped
+--- !u!1 &5398882997389479977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-  m_PrefabInstance: {fileID: 1961711829019610421}
+  m_PrefabInstance: {fileID: 8435556623851739292}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &8645061614250543768 stripped
+--- !u!54 &1860291423656599345 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-  m_PrefabInstance: {fileID: 1961711829019610421}
+  m_PrefabInstance: {fileID: 8435556623851739292}
   m_PrefabAsset: {fileID: 0}

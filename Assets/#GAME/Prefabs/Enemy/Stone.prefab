@@ -1,27 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7446232906776903652
+--- !u!114 &-3931024640439898992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779286142839351287}
+  m_GameObject: {fileID: 2649479935924553088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e3eb3316b1a2849973fc81aeaca8d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 404eb10563494924ab1e65853dd9de9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 7444171955910273263}
-  initialSpeed: 3
+  OnKill: {fileID: 11400000, guid: 5f15a8a8a3305af43b8a4ed533f75a70, type: 2}
+  scorePoints: 1
+  body: {fileID: 8645061614250543768}
+  initialSpeed: 5
   randomSpeed: 2
   randomRotationSpeed: 5
   randomSize: 0.2
-  scaleSize: {x: 0.4, y: 0.4, z: 0.4}
-  stonePool: []
-  stonePrefab: {fileID: -3931024640439898992, guid: 9a60b25b204c3504e93be82d35b3e4dc, type: 3}
-  stonesCount: 3
---- !u!1001 &832895228742823746
+  scaleSize: {x: 0, y: 0, z: 0}
+--- !u!1001 &1961711829019610421
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -30,11 +29,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.x
-      value: 4.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Size.y
-      value: 5
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.z
@@ -42,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Name
-      value: Asteriod
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 4883138011284460374, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_RootOrder
@@ -101,18 +96,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 401c6223b205127499fd373c711e397a, type: 3}
     - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557595891064372893, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -124,17 +107,24 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -5124594820684204710, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
     - {fileID: 5900235648788162534, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
---- !u!1 &3779286142839351287 stripped
+--- !u!1 &2649479935924553088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4611036709636507829, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-  m_PrefabInstance: {fileID: 832895228742823746}
+  m_PrefabInstance: {fileID: 1961711829019610421}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &7444171955910273263 stripped
+--- !u!54 &8645061614250543768 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7836275720100874157, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
-  m_PrefabInstance: {fileID: 832895228742823746}
+  m_PrefabInstance: {fileID: 1961711829019610421}
   m_PrefabAsset: {fileID: 0}

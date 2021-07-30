@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb35e50e3d54f0940a07bee32a1c23cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnKill: {fileID: 11400000, guid: 5f15a8a8a3305af43b8a4ed533f75a70, type: 2}
+  scorePoints: 0
 --- !u!1001 &295111781345772054
 PrefabInstance:
   m_ObjectHideFlags: 0
