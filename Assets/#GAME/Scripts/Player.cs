@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody body;
     [SerializeField] float movingSpeed;
     [SerializeField] float rotatingSpeed;
+    [SerializeField] GameEvent gameOver;
 
     private void FixedUpdate()
     {
@@ -24,6 +25,16 @@ public class Player : MonoBehaviour
     private void OnBecameInvisible()
     {
         transform.position = new Vector3(-transform.position.x, 0, -transform.position.z);
+    }
+
+    //killed by enemy
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            gameOver.Raise();
+            gameObject.SetActive(false);
+        }
     }
 
 }

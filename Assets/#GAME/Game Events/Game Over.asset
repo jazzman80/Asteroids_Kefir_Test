@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf436945956ec04c88e382b0c8004ac, type: 3}
-  m_Name: Game Event
+  m_Name: Game Over
   m_EditorClassIdentifier: 
