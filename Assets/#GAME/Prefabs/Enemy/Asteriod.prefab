@@ -30,6 +30,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1186305496859413409, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -7446232906776903652}
+    - target: {fileID: 1186305496859413409, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 3956894293013919160, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
       propertyPath: m_Size.x
       value: 4.7

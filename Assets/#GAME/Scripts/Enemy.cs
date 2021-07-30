@@ -17,4 +17,10 @@ public class Enemy : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    //on restart
+    public void GameOver()
+    {
+        gameObject.SetActive(false);
+    }
 }

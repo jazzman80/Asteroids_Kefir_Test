@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
-    [SerializeField] int score;
+    public int score;
 
     public void UpdateScore(int scoreUpdate)
     {
         score += scoreUpdate;
+    }
+
+    public void Restart()
+    {
+        score = 0;
     }
 }
