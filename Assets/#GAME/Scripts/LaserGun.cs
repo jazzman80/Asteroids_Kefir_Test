@@ -17,7 +17,7 @@ public class LaserGun : Gun
 
     public override bool CheckFire()
     {
-        if (Input.GetButtonDown(fireButton) && charge > 0) return true;
+        if (Input.GetButtonDown(fireButton) && charge > 0 && isGameRunning) return true;
         else return false;
     }
 

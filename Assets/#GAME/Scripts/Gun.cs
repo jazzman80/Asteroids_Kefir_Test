@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     [SerializeField] protected float fireForce;
     [SerializeField] protected string fireButton;
     [SerializeField] protected StudioEventEmitter shootSound;
+    protected bool isGameRunning = false;
 
     List<Ammo> ammoPool = new List<Ammo>();
 
@@ -45,7 +46,7 @@ public class Gun : MonoBehaviour
     //fires if fire button down
     public virtual bool CheckFire()
     {
-        if (Input.GetButtonDown(fireButton)) return true;
+        if (Input.GetButtonDown(fireButton) && isGameRunning) return true;
         else return false;
     }
     
@@ -55,4 +56,9 @@ public class Gun : MonoBehaviour
         shootSound.Play();
     }
 
+    //on game start
+    public void OnGameStart()
+    {
+        isGameRunning = true;
+    }
 }
