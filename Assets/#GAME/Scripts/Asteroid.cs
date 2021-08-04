@@ -36,6 +36,7 @@ public class Asteroid : Stone
             stone.transform.position = transform.position;
             stone.transform.rotation = movingDirection;
             stone.gameObject.SetActive(true);
+            stone.SetVisualMode(visualMode);
         }
     }
 
@@ -45,4 +46,5 @@ public class Asteroid : Stone
         if(other.CompareTag("Ammo")) Explode();
         base.OnTriggerEnter(other);
     }
+
 }

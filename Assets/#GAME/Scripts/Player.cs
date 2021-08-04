@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
     [SerializeField] float movingSpeed;
     [SerializeField] float rotatingSpeed;
     [SerializeField] GameEvent gameOver;
+    [SerializeField] GameObject visualSprite;
+    [SerializeField] GameObject visual3D;
+
 
     private void FixedUpdate()
     {
@@ -44,6 +47,21 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.identity;
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
+    }
+
+    //on visual mode change
+    public void ChangeVisualMode(int mode)
+    {
+        if(mode == 0)
+        {
+            visual3D.SetActive(false);
+            visualSprite.SetActive(true);
+        }
+        else if(mode == 1)
+        {
+            visual3D.SetActive(true);
+            visualSprite.SetActive(false);
+        }
     }
 
 }

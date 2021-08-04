@@ -18,8 +18,9 @@ public class GameScoreText : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Restart()
+
+    private void OnEnable()
     {
-        gameScoreText.text = "00";
+        gameScoreText.text = "0";
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Player player;
-    [SerializeField] GameScoreText gameScoreText;
     
     public void Quit()
     {
@@ -16,8 +15,5 @@ public class GameManager : MonoBehaviour
     {
         player.gameObject.SetActive(true);
         player.Restart();
-
-        gameScoreText.gameObject.SetActive(true);
-        gameScoreText.Restart();
     }
 }

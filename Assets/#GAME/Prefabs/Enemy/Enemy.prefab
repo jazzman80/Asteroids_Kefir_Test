@@ -1,47 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1186305496859413409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4611036709636507829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85bce3aa153f19343be60b42069de346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 38c68c7029db23e4e9dbb94c81c44070, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5900235648788162534}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: GameOver
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5900235648788162534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4611036709636507829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb35e50e3d54f0940a07bee32a1c23cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnKill: {fileID: 11400000, guid: 5f15a8a8a3305af43b8a4ed533f75a70, type: 2}
-  scorePoints: 0
 --- !u!1001 &295111781345772054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,67 +7,76 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
+    - target: {fileID: 5178038669217665344, guid: 38dc26aaecaead14b949ed58f5487a08,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3645059637019553778, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
---- !u!1 &4611036709636507829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4316071249237133987, guid: 38dc26aaecaead14b949ed58f5487a08, type: 3}
-  m_PrefabInstance: {fileID: 295111781345772054}
-  m_PrefabAsset: {fileID: 0}

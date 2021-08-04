@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] float cooldownTime;
     [SerializeField] Transform[] spawnPoints;
 
+    public bool isGameRunning = false;
+
     List<Enemy> enemyPool = new List<Enemy>();
     bool isNeedEnemy = true;
 
@@ -25,8 +27,9 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        //activate enemy if cooldown time is over
-        if (isNeedEnemy)
+        //activate enemy if cooldown time is over 
+        //if the game is running
+        if (isNeedEnemy && isGameRunning)
         {
             foreach(Enemy enemy in enemyPool)
             {
@@ -52,5 +55,35 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldownTime);
         isNeedEnemy = true;
+    }
+
+    //on visual mode change
+    public void ChangeVisualMode(int mode)
+    {
+        foreach (Enemy enemy in enemyPool)
+        {
+            enemy.visualMode = mode;
+            enemy.SetVisualMode(mode);
+        }
+    }
+
+    //on game start
+    public void OnStart(int mode)
+    {
+        isGameRunning = true;
+        ChangeVisualMode(mode);
+    }
+
+    //on game over
+    public void OnGameOver()
+    {
+        isGameRunning = false;
+        foreach (Enemy enemy in enemyPool) enemy.gameObject.SetActive(false);
+    }
+
+    //on restart
+    public void OnRestart()
+    {
+        isGameRunning = true;
     }
 }
