@@ -5,10 +5,12 @@ public class LaserGun : Gun
 {
     [SerializeField] float chargeTime;
     [SerializeField] int maximumCharge;
+    [SerializeField] GameEvent fireEvent;
+    [SerializeField] GameEvent chargeEvent;
     int charge;
-    bool isCharged = true;
 
-    private void Start()
+    //on start and restart there is full charge
+    private void OnEnable()
     {
         charge = maximumCharge;
     }
@@ -22,8 +24,8 @@ public class LaserGun : Gun
     public override void Fire(Ammo ammo)
     {
         ammo.Fire(transform, fireForce);
-        //isCharged = false;
         if(charge > 0) charge--;
+        fireEvent.Raise();
 
         StopAllCoroutines();
         StartCoroutine(Charge());
@@ -32,8 +34,8 @@ public class LaserGun : Gun
     IEnumerator Charge()
     {
         yield return new WaitForSeconds(chargeTime);
-        //isCharged = true;
         charge++;
+        chargeEvent.Raise();
         if (charge < maximumCharge) StartCoroutine(Charge());
     }
 }

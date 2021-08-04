@@ -873,6 +873,7 @@ MonoBehaviour:
   - {fileID: 1907518775}
   - {fileID: 849312549}
   - {fileID: 61675398}
+  isGameRunning: 0
 --- !u!4 &443902658
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,6 +1076,9 @@ GameObject:
   - component: {fileID: 598285651}
   - component: {fileID: 598285650}
   - component: {fileID: 598285652}
+  - component: {fileID: 598285653}
+  - component: {fileID: 598285655}
+  - component: {fileID: 598285654}
   m_Layer: 0
   m_Name: UFO Spawner
   m_TagString: Untagged
@@ -1106,6 +1110,7 @@ MonoBehaviour:
   - {fileID: 1907518775}
   - {fileID: 849312549}
   - {fileID: 61675398}
+  isGameRunning: 0
 --- !u!4 &598285651
 Transform:
   m_ObjectHideFlags: 0
@@ -1148,6 +1153,90 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &598285653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598285649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426255a21b0b2044bbad432cbf605b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 2ba2252068f2c5145a3e62a2f889b4eb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 598285650}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &598285654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598285649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bce3aa153f19343be60b42069de346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e1c68b04714452442b674f21fce9d9bf, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 598285650}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnRestart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &598285655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598285649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bce3aa153f19343be60b42069de346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 38c68c7029db23e4e9dbb94c81c44070, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 598285650}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &748603714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1251,7 @@ GameObject:
   - component: {fileID: 748603715}
   - component: {fileID: 748603719}
   - component: {fileID: 748603720}
+  - component: {fileID: 748603721}
   m_Layer: 5
   m_Name: Game Canvas
   m_TagString: Untagged
@@ -1331,6 +1421,46 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &748603721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748603714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426255a21b0b2044bbad432cbf605b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 2ba2252068f2c5145a3e62a2f889b4eb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1672383201}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1654199862}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &752270515
 GameObject:
@@ -2491,6 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fc28bf2f4e8894e9aadd6523364dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScoreText: {fileID: 2092169898}
   score: 0
 --- !u!4 &1338259818
 Transform:
@@ -3507,6 +3638,9 @@ GameObject:
   - component: {fileID: 1860881936}
   - component: {fileID: 1860881935}
   - component: {fileID: 1860881937}
+  - component: {fileID: 1860881938}
+  - component: {fileID: 1860881940}
+  - component: {fileID: 1860881939}
   m_Layer: 0
   m_Name: Asteroid Spawner
   m_TagString: Untagged
@@ -3538,6 +3672,7 @@ MonoBehaviour:
   - {fileID: 1907518775}
   - {fileID: 849312549}
   - {fileID: 61675398}
+  isGameRunning: 0
 --- !u!4 &1860881936
 Transform:
   m_ObjectHideFlags: 0
@@ -3572,6 +3707,90 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
         m_MethodName: ChangeVisualMode
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1860881938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860881934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426255a21b0b2044bbad432cbf605b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 2ba2252068f2c5145a3e62a2f889b4eb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1860881935}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1860881939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860881934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bce3aa153f19343be60b42069de346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e1c68b04714452442b674f21fce9d9bf, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1860881935}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnRestart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1860881940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860881934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bce3aa153f19343be60b42069de346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 38c68c7029db23e4e9dbb94c81c44070, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1860881935}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnGameOver
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4010,12 +4229,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083706094}
   m_CullTransparentMesh: 1
---- !u!1 &2092169896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6947535839612559179, guid: d0e8a30ef5ea3814ea7746d41ecda36c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1435525756}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2092169897 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8572101837544445608, guid: d0e8a30ef5ea3814ea7746d41ecda36c,
@@ -4028,26 +4241,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1435525756}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092169896}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2092169900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092169896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e489e8d8d383e4a8e1c09a6f530af2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameScoreText: {fileID: 2092169898}
-  scoreSystem: {fileID: 1338259817}
 --- !u!1001 &2114019905
 PrefabInstance:
   m_ObjectHideFlags: 0
