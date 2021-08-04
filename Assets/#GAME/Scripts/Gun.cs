@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Gun : MonoBehaviour
 {
     [SerializeField] Ammo ammo;
     [SerializeField] protected float fireForce;
     [SerializeField] protected string fireButton;
+    [SerializeField] protected StudioEventEmitter shootSound;
 
     List<Ammo> ammoPool = new List<Ammo>();
 
@@ -50,6 +52,7 @@ public class Gun : MonoBehaviour
     public virtual void Fire(Ammo ammo)
     {
         ammo.Fire(transform, fireForce);
+        shootSound.Play();
     }
 
 }

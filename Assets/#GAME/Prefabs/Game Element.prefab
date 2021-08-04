@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5178038669217665344}
   - component: {fileID: -1668449909100755525}
   - component: {fileID: 2279039438395274267}
-  - component: {fileID: 3670931771265431470}
+  - component: {fileID: -506810538100312395}
   m_Layer: 0
   m_Name: Game Element
   m_TagString: Untagged
@@ -185,8 +185,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &3670931771265431470
-BoxCollider:
+--- !u!136 &-506810538100312395
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -195,6 +195,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Radius: 2
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

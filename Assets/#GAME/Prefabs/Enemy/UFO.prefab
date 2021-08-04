@@ -99,6 +99,7 @@ MonoBehaviour:
   scorePoints: 10
   visualSprite: {fileID: 7208384069773588671}
   visual3D: {fileID: 1049311994108900666}
+  explosionSound: {fileID: 9021140431329724188}
   body: {fileID: 1860291423656599345}
   movingSpeed: 50
   rotatingSpeed: 50
@@ -226,6 +227,11 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9002414292682601635, guid: ca7b1fa83122db44893a4aa87defb873,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5124594820684204710, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
     - {fileID: 5900235648788162534, guid: ca7b1fa83122db44893a4aa87defb873, type: 3}
@@ -248,6 +254,18 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 8435556623851739292}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9021140431329724188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8637735433453510784, guid: ca7b1fa83122db44893a4aa87defb873,
+    type: 3}
+  m_PrefabInstance: {fileID: 8435556623851739292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398882997389479977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7208384069773588671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1231819233026908195, guid: ca7b1fa83122db44893a4aa87defb873,

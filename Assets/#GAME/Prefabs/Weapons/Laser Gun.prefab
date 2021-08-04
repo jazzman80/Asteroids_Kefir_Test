@@ -15,6 +15,7 @@ MonoBehaviour:
   ammo: {fileID: -6577239594637822523, guid: 91e3786ce2945dc4fab3c44e13aedef1, type: 3}
   fireForce: 30
   fireButton: Fire2
+  shootSound: {fileID: 7262893115451254817}
   chargeTime: 1
   maximumCharge: 3
   fireEvent: {fileID: 11400000, guid: 246ee72aa089fdb46a6d5a1cfc680818, type: 2}
@@ -26,6 +27,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5773298682979863563, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a08f95260da16d4789f7dc842ead135, type: 3}
     - target: {fileID: -4156239686604699891, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
         type: 3}
       propertyPath: ammo
@@ -128,6 +134,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6335596842061273431, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
+        type: 3}
+      propertyPath: Event
+      value: event:/Laser Shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335596842061273431, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335596842061273431, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2951b22e1fc4aa47b34f4d14337c7f0, type: 3}
 --- !u!1 &2247627708436974364 stripped
@@ -136,3 +157,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3685762041449820534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7262893115451254817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6335596842061273431, guid: c2951b22e1fc4aa47b34f4d14337c7f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3685762041449820534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247627708436974364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

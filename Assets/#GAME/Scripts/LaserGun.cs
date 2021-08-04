@@ -24,6 +24,7 @@ public class LaserGun : Gun
     public override void Fire(Ammo ammo)
     {
         ammo.Fire(transform, fireForce);
+        shootSound.Play();
         if(charge > 0) charge--;
         fireEvent.Raise();
 

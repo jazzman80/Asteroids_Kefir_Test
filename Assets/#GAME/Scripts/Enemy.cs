@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
+using FMODUnity;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int scorePoints;
     [SerializeField] GameObject visualSprite;
     [SerializeField] GameObject visual3D;
+    [SerializeField] StudioEventEmitter explosionSound;
 
     private void OnEnable()
     {
@@ -22,6 +24,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Ammo"))
         {
             OnKill.Raise(scorePoints);
+            explosionSound.Play();
             gameObject.SetActive(false);
         }
     }
